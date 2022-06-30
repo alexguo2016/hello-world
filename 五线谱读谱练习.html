@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practise</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="links">
+        <a href="./intervalPractice/index.html">音程练习</a>
+    </div>
+    <!-- 最外层元素, 事件委托 -->
+    <div class="div-outer">
+        <div class="div-btn-choose">
+            <button class="btn-choose btn-show-staff">隐藏五线谱</button>
+            <button class="btn-choose btn-start-practise">刷新练习题</button>
+            <button class="btn-show-error-history">显示错误统计</button>
+        </div>
+        <div class="div-show-staff">
+            <!-- 用直接展示图片即可 -->
+            <img src="./staff.jpeg" class="img-staff" alt="">
+        </div>
+        <div class="div-start-practise">
+            <!-- 用 canvas 做 -->
+            <canvas width="300" height="250" class="canvas-for-show"></canvas>
+            <div class="div-answer-selector">
+                <div class="div-answer-cell" data-answer="CP">CP</div>
+                <div class="div-answer-cell" data-answer="DP">DP</div>
+                <div class="div-answer-cell" data-answer="EP">EP</div>
+                <div class="div-answer-cell" data-answer="FP">FP</div>
+                <div class="div-answer-cell" data-answer="GP">GP</div>
+                <div class="div-answer-cell" data-answer="AP">AP</div>
+                <div class="div-answer-cell" data-answer="BP">BP</div>
+                <div class="div-answer-cell" data-answer="CPP">CPP</div>
+            </div>
+            <div class="div-answer-selector">
+                <div class="div-answer-cell" data-answer="C">C</div>
+                <div class="div-answer-cell" data-answer="D">D</div>
+                <div class="div-answer-cell" data-answer="E">E</div>
+                <div class="div-answer-cell" data-answer="F">F</div>
+                <div class="div-answer-cell" data-answer="G">G</div>
+                <div class="div-answer-cell" data-answer="A">A</div>
+                <div class="div-answer-cell" data-answer="B">B</div>
+            </div>
+            <div class="div-answer-selector">
+                <div class="div-answer-cell" data-answer="CM">CM</div>
+                <div class="div-answer-cell" data-answer="DM">DM</div>
+                <div class="div-answer-cell" data-answer="EM">EM</div>
+                <div class="div-answer-cell" data-answer="FM">FM</div>
+                <div class="div-answer-cell" data-answer="GM">GM</div>
+                <div class="div-answer-cell" data-answer="AM">AM</div>
+                <div class="div-answer-cell" data-answer="BM">BM</div>
+            </div>
+            <div class="div-submit-outer div-answer-selector">
+                <div class="div-answer-btn">提交</div>
+                <div class="div-answer-btn-reflash">刷新</div>
+            </div>
+            <div class="div-answer-for-show">ADDGE</div>
+        </div>
+
+        <div class="div-error-outer none">
+            错误统计如下: 
+            <div class="div-error-history"></div>
+        </div>
+    </div>
+
+    <!-- 脚本 -->
+    <script src="./tool.js"></script>
+    <script src="./action.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-change, .div-len {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .div-change-cell, .div-len-cell {
+            margin: 5px;
+            border: 1px solid #333;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            /* 加入最小宽度, 看起来统一一些 */
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .div-question {
+            height: 200px;
+
+            margin: 50px 32px;
+            border: 1px solid #ececec;
+            border-radius: 10px;
+        }
+
+        .btn-group {
+            text-align: center;
+        }
+
+        .btn-answer, .btn-reflash {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="links">
+        <a href="../五线谱读谱练习.html">五线谱读谱练习</a>
+    </div>
+    <div class="div-outer">
+        <h3 class="div-title">
+            <p>音程练习, 点击刷新, 然后回答.</p>
+            <p>范围由 1 到 高音4.</p>
+        </h3>
+        <div class="div-question">
+            <div class="div-question-cell"></div>
+            <div class="div-real-answer-cell" style="height: 45px;"></div>
+            <div class="div-your-answer-cell" style="height: 34px;"></div>
+        </div>
+    
+        <div class="div-change">
+            <div class="div-change-cell" data-change="纯">纯</div>
+            <div class="div-change-cell" data-change="大">大</div>
+            <div class="div-change-cell" data-change="小">小</div>
+            <div class="div-change-cell" data-change="增">增</div>
+            <div class="div-change-cell" data-change="倍增">倍增</div>
+            <div class="div-change-cell" data-change="减">减</div>
+            <div class="div-change-cell" data-change="倍减">倍减</div>
+        </div>
+    
+        <div class="div-len">
+            <div class="div-len-cell" data-len="1">1</div>
+            <div class="div-len-cell" data-len="2">2</div>
+            <div class="div-len-cell" data-len="3">3</div>
+            <div class="div-len-cell" data-len="4">4</div>
+            <div class="div-len-cell" data-len="5">5</div>
+            <div class="div-len-cell" data-len="6">6</div>
+            <div class="div-len-cell" data-len="7">7</div>
+            <div class="div-len-cell" data-len="8">8</div>
+        </div>
+    
+        <div class="btn-group">
+            <button class="btn-answer">回答</button>
+            <button class="btn-reflash">刷新</button>
+        </div>
+    </div>
+
+    <script src="../tool.js"></script>
+    <script src="./c_major.js"></script>
+    <script src="./questions.js"></script>
+    <script src="./action.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
