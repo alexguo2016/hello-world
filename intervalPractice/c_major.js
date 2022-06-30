@@ -187,6 +187,7 @@ const intervalRelation = function(begin, end) {
         // 计算是大度还是小度
         // 检查半音个数
         let n = countSemitone(begin, end)
+        // log('半音个数', n, begin, end)
         if (n === 0) {
             // return `大${len}度`
             return {
@@ -267,17 +268,20 @@ const isSemitone = function(current, next) {
 // 首先, 补全整个关系, 例如 E-高音F 的话, 补全为 E F G A B CP DP EP FP
 // 然后遍历, 找半音个数
 const countSemitone = function(begin, end) {
+    // log('countSemitone', begin, end)
     let aList = [
         'EM', 'FM', 'GM', 'AM', 'BM', 'C', 'D', 'E', 'F', 'G', 'A', 'B', 'CP', 'DP', 'EP', 'FP', 'GP', 'AP',
     ]
     let i_begin = aList.indexOf(begin)
     let i_end = aList.indexOf(end)
     let result = 0
-    for (let i = i_begin; i < i_end - 1; i++) {
+    // log('i_begin', i_begin, i_end, aList[i_begin], aList[i_end])
+    for (let i = i_begin; i < i_end; i++) {
         // 判断每次循环里面的本音和下一个音
         // 如果符合半音规则, 则半音数量 + 1
         let current = aList[i]
         let next = aList[i+1]
+        // log(current, next, "next and current")
         if (isSemitone(current, next)) {
             result += 1
         }
@@ -307,5 +311,14 @@ const testLenOfInterval = () => {
         console.log('success')
     }
 }
+
+const testIntervalRelation = () => {
+    let begin = 'D'
+    let end = 'F'
+    let r = intervalRelation(begin, end)
+    log(r, 'RRR**')
+}
+
+// testIntervalRelation()
 
 // testLenOfInterval()
