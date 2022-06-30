@@ -4,6 +4,8 @@ const actionList = {
     'btn-answer': submit,
     // 刷新问题
     'btn-reflash': reflash,
+    // 清除回答
+    'btn-clear': clearYourAnswer,
     // 点击变化程度
     'div-change-cell': clickChange,
     // 点击基本音程

@@ -86,3 +86,8 @@ const clearLastAnswer = () => {
     let yourAnswerDiv = find('.div-real-answer-cell')
     yourAnswerDiv.innerHTML = ''
 }
+
+const clearYourAnswer = () => {
+    let yourAnswerDiv = find('.div-your-answer-cell')
+    yourAnswerDiv.innerHTML = ''
+}
